@@ -8,36 +8,46 @@ Manager replaces class in the oriented setup and takes a more c# approach where 
 
 When pertaining to scope and the flag external is used, then the scope is universal, whichs means anything outside of the files are universal, anything inside the file gets a flag of internal, and is global scope, unless it breaks down into the local scope.
 
-           Conversion Table
-=================================================================================
-This langauge:             Used to be
-=================================================================================
-hollow                      void
-num                          int
-deci                        float
-mark                         char
-return                       return
+                    Conversion Table
+    =================================================================================
+    This langauge:              Old Keywords:
+    =================================================================================
+     hollow                     void
+     num                        int
+     deci                       float
+     mark                       char
+     return                     return
 
+     check                      if
+     else                       else
+     loop                       while
+     act                        do
+     set                        for
+     pare                       bool
+     compare                    switch
+     line                       case
+     list                       array
+     break                      break
+     struct                     construct
+     log                        enum
+     bridge                     union
 
-check                       if
-else                        else
-loop                        while
-act                          do
-set                          for
-pare                         bool
-compare                     switch
-line                         case
-list                        array
-break                        break
-struct                      construct
-log                          enum
-bridge                       union
+     manager                    class
+     private                    private
+     public                     public
 
-manager                     class
-private                     private
-public                      public
+     place_holder     aka       variable
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
 
-place_holder     aka       variable
 
 
 
