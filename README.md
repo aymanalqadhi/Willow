@@ -28,7 +28,7 @@ When pertaining to scope and the flag external is used, then the scope is univer
      line                       case
      list                       array
      break                      break
-     struct                     construct
+     construct                  struct
      log                        enum
      bridge                     union
 
@@ -40,18 +40,8 @@ When pertaining to scope and the flag external is used, then the scope is univer
            
            
            
-           
-           
-           
-           
-           
-           
-           
-
-
-
-
-                 scope layout
+     
+                 scope layout(maybe see if I cant make it happen)
                
                 universal(external)
                   /       \
