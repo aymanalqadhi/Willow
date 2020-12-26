@@ -7,17 +7,19 @@
 
 #include "type.h"
 #include "check_words.h"
-#include "errors.h"
+#include "error.h"
 #include "parse.h"
+
 
 int main()
 {
+	lex source = { .line_num = 0,.token_num = 0 };
 
 	if ((source.file = fopen("willow.w", "r")) == NULL)          
 	{
 		file_error("file error: error opening  the program file", 0, 0);                      
 		exit(1);
-  }
+    }
 
 	while (true)
 	{
@@ -30,14 +32,17 @@ int main()
 		}
 		print_token(build);
 		destroy_token(build);
+
 	}
-  
+
 	parser parsing = { .source = &source };
 	parse(&parsing);
 
 	fclose(source.file);
 	return 0;
+
 }
+
 
 token create_token(token_type record, int line_num, int token_num, const char *lexer_buffer, int length)
 {
@@ -65,6 +70,7 @@ void destroy_token(token build_token)
 {
 	free((void *)build_token.text_buffer);
 }
+
 
 token retrieve_tokens(lex *source)
 {
@@ -205,7 +211,7 @@ token retrieve_tokens(lex *source)
 		return create_token(_strand_literal, line_num, token_num, lexer_buffer, length);
 	}
 
-	while ((ch = fgetc(source->file)) != EOF && length < max_buffer_elem)
+	while ((ch = fgetc(source->file)) != EOF && length < 1000)
 	{
 		if (!letter(ch))
 		{
@@ -215,7 +221,7 @@ token retrieve_tokens(lex *source)
 		lexer_buffer[length++] = ch;
 	}
 
-	if (length >= max_buffer_elem)
+	if (length >= 1000)
 	{
 		lexical_error("lexical buffer error: token exceeds maximum length", line_num, token_num);
 	}
@@ -234,6 +240,7 @@ token retrieve_tokens(lex *source)
 		return build_token;
 	}
 }
+
 
 void print_token(token build_token)
 {
@@ -328,6 +335,4 @@ void print_token(token build_token)
 	default:                  lexical_error("Unknown Token:  unknown token in the print_token function", line_num, token_num);                       break;
 	}
 }
-
-
 
