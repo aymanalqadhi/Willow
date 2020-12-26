@@ -41,7 +41,7 @@ When pertaining to scope and the flag external is used, then the scope is univer
            
            
      
-                 scope layout(maybe see if I cant make it happen)
+                 scope layout(maybe, we'll see if I cant make it happen)
                
                 universal(external)
                   /       \
