@@ -5,9 +5,10 @@
 #include <string.h>
 
 #include "type.h"
-#include "errors.h"
+#include "parse.h"
+#include "error.h"
 
-
+void match(parser *parsing_ptr, token_type expected);
 
 void advance_token(parser *parsing_ptr)
 {
@@ -18,7 +19,7 @@ void advance_token(parser *parsing_ptr)
 parse(parser *parsing_ptr)
 {
 
-	while(parsing_ptr->live_token.record != _enfi)
+	while (parsing_ptr->live_token.record != _enfi)
 	{
 		advance_token(parsing_ptr);
 
@@ -41,7 +42,7 @@ void match(parser *parsing_ptr, token_type expected)
 {
 	lex *source = &source;
 
-	if(parsing_ptr->live_token.record == expected)
+	if (parsing_ptr->live_token.record == expected)
 	{
 		advance_token(parsing_ptr);
 	}
@@ -51,7 +52,6 @@ void match(parser *parsing_ptr, token_type expected)
 
 begin_manager(parser *parsing_ptr)
 {
-   //function to open a header file
+	//function to open a header file
 	printf("test to see if begin_header function is being entered\n");
 }
-
