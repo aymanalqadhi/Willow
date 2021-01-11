@@ -47,19 +47,4 @@ Any help would be much appreciated!!!
            
            
      
-                 scope layout(maybe, we'll see if I cant make it happen)
-               
-                universal(external)
-                  /       \
-                 /         \
-                /           \
-               /             \
-              /                \
-             /                   \
-            /                      \
-          global(internal)         global(internal)
-           |                        |
-           |                        |
-           |-local                  |-local
-           |                        |
-           |-local                  |-local
+
