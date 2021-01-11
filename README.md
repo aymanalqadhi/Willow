@@ -8,8 +8,9 @@ Manager replaces class in the oriented setup and takes a more c# approach where 
 
 When pertaining to scope and the flag external is used, then the scope is universal, whichs means anything outside of the files are universal, anything inside the file gets a flag of internal, and is global scope, unless it breaks down into the local scope.
 
-     When running the code. The results show the line num, then the token count based off being lexed, 
-     and then the token, and what token it is.
+Image of possible scope: I wonder if this would actually work to avoid header conflition between files.
+
+https://github.com/ravenleeblack/Willow/issues/1#issue-782949005
      
 Any help would be much appreciated!!!     
      
@@ -45,8 +46,7 @@ Any help would be much appreciated!!!
      place_holder     aka       variable
            
            
-    Image of Scope:     
-    https://github.com/ravenleeblack/Willow/issues/1#issue-782949005       
+           
            
      
 
