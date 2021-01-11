@@ -16,7 +16,8 @@ of the game functions in this file. Taking this approach is straight forward.
 
 Willow takes somewhat of a c like approach in grammer, but there are many changes, and not just the keywords but also in the grammer. In the above code you will notice that the main function uses a colon : and a rarrow > instead of c's lparen ( and rparen ).
 
-    In willow it is considered good practice to have the colon next to the function name for readabilty and put two spaces before the strand literal.
+    In willow it is considered good practice to have the colon next to the function name for readabilty 
+    and put two spaces before the strand literal.
 
     Willows data types: hollow, num, deci, decii, deciv, mark, strand, and return.  
 
