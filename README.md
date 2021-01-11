@@ -45,6 +45,8 @@ Any help would be much appreciated!!!
      place_holder     aka       variable
            
            
+    Image of Scope:     
+    https://github.com/ravenleeblack/Willow/issues/1#issue-782949005       
            
      
 
