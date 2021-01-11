@@ -5,13 +5,13 @@ Willow takes a more oriented approach in its language. There is a class system i
 global declarations and functions are called and used inside of the manager to accomplish the goals of the program. In the example code below one would say:
 The manager manages all of the hello functions in this file.
 
-hello manager
-{
-    hollow main:>
+    hello manager
     {
+      hollow main:>
+      {
         write:  "hello world\n">;
+      }
     }
-}
 
 Willow takes a c like approach to most of the code except for a few changes. In the above code you will notice that the main function uses a colon :
 and a rarrow > instead of the lparen ( and rparen ). In willow it is considered good practice to have the colon next to the function name
@@ -22,6 +22,27 @@ In willow the data types are hollow, num, deci, decii, deciv, mark, strand, and 
 
 All derived types and statements are considered to be tools, these data tools are what we use on the actual data, to accomplish our goals. 
 Willows data tools: check, else, loop, set, pare, compare, line, break, construct, log, bridge, list
+
+
+     hollow main:>
+     {
+        check i < 10:
+        {
+
+        }
+        else check something else:
+        {
+        
+        }
+        
+        check i < 10: { //do something fancy }
+        check i < 10: { //do something fancy }
+        check i < 10: { //do something fancy }
+     }
+
+As mentioned above. Another one of the changes is how the check statement is done. I changed the if to check because it reminds us to check 
+the expresssion. In the above example you'll notice that The parens are also missing. This makes the check expression more readable. Even more
+so if you are in the habit of using check statements in a linear fashion.
 
 In willow, variables are called placeholders. We use the word placeholder because it decribes the actual meaning of what we are doing more clearly.
 We are using a placeholder, which has an address in memory, for one of our data types value.
