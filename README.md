@@ -19,10 +19,9 @@ Willow takes somewhat of a c like approach in grammer, but there are many change
     In willow it is considered good practice to have the colon next to the function name for readabilty 
     and put two spaces before the strand literal.
 
+All derived types and statements are considered to be data tools. These data tools are the tools we will use on the actual data called data types, to accomplish our goals. 
+
     Willows data types: hollow, num, deci, decii, deciv, mark, strand, and return.  
-
-All derived types and statements are considered to be data tools. These data tools are the tools we will use on the actual data, to accomplish our goals. 
-
     Willows data tools: check, else, loop, set, pare, compare, line, break, construct, log, bridge, list
 
 
