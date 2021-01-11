@@ -2,8 +2,9 @@
 
 
 Willow takes a more oriented approach in its language. The keyword class has been renamed to manager. Global declarations and functions are called and used inside 
-of the manager in a more c# fashion to accomplish our goals in the program. In the example code below we could say: The manager manages all of the hello functions
-in this file. When we say it in this fashion then the class becomes easier to understand. 
+of the manager in a more c# class fashion to accomplish our goals in the program. In the example code below we could say: The manager manages all of the hello functions
+in this file. When we say it in this fashion then the class becomes easier to understand. If the identifier was changed to game, then it would be the manager manages all 
+of the game functions in this file. Taking this approach is straight forward.
 
     hello manager
     {
@@ -13,14 +14,15 @@ in this file. When we say it in this fashion then the class becomes easier to un
       }
     }
 
-Willow takes somewhat of a c like approach, but there are many changes, and not just the keywords but also in the grammer. In the above code you will notice that the main function uses a colon : and a rarrow > instead of c's lparen ( and rparen ). In willow it is considered good practice to have the colon next to the function name
-for readabilty and put two spaces before the strand literal.
+Willow takes somewhat of a c like approach in grammer, but there are many changes, and not just the keywords but also in the grammer. In the above code you will notice that the main function uses a colon : and a rarrow > instead of c's lparen ( and rparen ).
 
+    In willow it is considered good practice to have the colon next to the function name for readabilty and put two spaces before the strand literal.
 
-In willow the data types are hollow, num, deci, decii, deciv, mark, strand, and return.  
+    Willows data types: hollow, num, deci, decii, deciv, mark, strand, and return.  
 
 All derived types and statements are considered to be data tools. These data tools are the tools we will use on the actual data, to accomplish our goals. 
-Willows data tools: check, else, loop, set, pare, compare, line, break, construct, log, bridge, list
+
+    Willows data tools: check, else, loop, set, pare, compare, line, break, construct, log, bridge, list
 
 
      hollow main:>
@@ -42,8 +44,8 @@ Willows data tools: check, else, loop, set, pare, compare, line, break, construc
      }
 
 As mentioned above. One of the many changes is how the check statement is done. I changed the if to check because it reminds us to check 
-the expresssion then excute a statement. In the above example you'll notice that The parens are also missing. This makes the check expression more readable. Even more
-so if you are in the habit of using check statements in a linear fashion. Without both parens we now have one less character to type when coding since the rparen is replaced with a colon.
+the expresssion, then excute a statement. In the above example you'll notice that The parens are also missing. This makes the check expression more readable. Even more
+so if you are in the habit of using check statements in a linear fashion. Without both parens we now have one less character to type when coding, the rparen is replaced with a colon.
 
 
 In willow, variables are called placeholders. We use the word placeholder because it makes more sense.
@@ -83,7 +85,7 @@ We ditched the parens again and end it with a colon. We can now say that we are 
 
 
 When pertaining to scope: Anything outside of a file has a flag of external, if the flag is external, then the scope is in universal scope. 
-Anything inside of a file has a flag of internal, which sets the external to null, and is in the global scope. Anything inside of a function 
+Anything inside of a file has a flag of internal, if the flag is internal,then it is in the global scope. Anything inside of a function 
 is in the local scope. 
 
 
@@ -91,6 +93,7 @@ is in the local scope.
 
 Image of possible scope: I wonder if this would actually work to avoid header confliction between files.
 https://github.com/ravenleeblack/Willow/issues/1#issue-782949005
+
 If the set up in the above link is doable, then it would be considered bad practice to write universals in the .mf file, they
 should only be initialized and declared in a user header file.
 
