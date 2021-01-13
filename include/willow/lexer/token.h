@@ -100,16 +100,16 @@ typedef enum
 
 struct w_token {
   w_token_type_t type;
-  const char *   text_buffer;
-  size_t         line_num;
-  size_t         token_num;
+
+  char * text_buffer;
+  size_t line_num;
+  size_t token_num;
 };
 
 struct w_token *w_token_new(w_token_type_t type, const char *text_buffer,
-                            size_t line_num, size_t token_num);
+                            size_t len, size_t line_num, size_t token_num);
 
 void w_token_free(struct w_token *tok);
-
 void w_token_print(const struct w_token *tok);
 
 #endif /* WILLOW_LEXER_TOKEN_H */

@@ -77,11 +77,11 @@ static const char *printable_tokes[] = {
 };
 
 struct w_token *w_token_new(w_token_type_t type, const char *text_buffer,
-                            size_t line_num, size_t token_num) {
+                            size_t len, size_t line_num, size_t token_num) {
   struct w_token *tok = W_MALLOC(struct w_token, 1);
 
   tok->type        = type;
-  tok->text_buffer = text_buffer;
+  tok->text_buffer = w_strndup(text_buffer, len);
   tok->line_num    = line_num;
   tok->token_num   = token_num;
 
@@ -90,10 +90,14 @@ struct w_token *w_token_new(w_token_type_t type, const char *text_buffer,
 
 void w_token_free(struct w_token *tok) {
   assert(tok != NULL);
+
+  w_free(tok->text_buffer);
   w_free((void *)tok);
 }
 
 void w_token_print(const struct w_token *tok) {
+  assert(tok != NULL);
+
   log_info("%03d:%03d: %s \t %s", tok->line_num, tok->token_num,
            tok->text_buffer, printable_tokes[tok->type]);
 }
