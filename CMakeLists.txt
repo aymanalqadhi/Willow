@@ -4,8 +4,9 @@ cmake_minimum_required(VERSION 3.10)
 project(willow C)
 
 # Project files
-set(SOURCE_FILES src/main.c
-                 src/error.c)
+set(SOURCE_FILES src/error.c
+                 src/memory.c
+                 src/main.c)
 include_directories(include)
 
 # Project targets
