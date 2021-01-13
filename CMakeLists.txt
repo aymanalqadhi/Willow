@@ -8,6 +8,7 @@ set(SOURCE_FILES src/error.c
                  src/logger.c
                  src/memory.c
                  src/lexer_token.c
+                 src/lexer.c
                  src/main.c)
 include_directories(include)
 
