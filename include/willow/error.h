@@ -1,0 +1,17 @@
+#ifndef WILLOW_ERROR_H
+#define WILLOW_ERROR_H
+
+typedef enum {
+  WILLOW_ERR_SUCESS,
+  WILLOW_ERR_PREPROCESS,
+  WILLOW_ERR_LEXICAL,
+  WILLOW_ERR_PARSER,
+  WILLOW_ERR_SYMBOLE_TABLE,
+  WILLOW_ERR_SYNTAX,
+  WILLOW_ERR_DATA_TYPE,
+  WILLOW_ERR_FILE
+} w_error_t;
+
+const char *w_strerror(w_error_t err);
+
+#endif /* WILLOW_ERROR_H */
