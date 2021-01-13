@@ -23,8 +23,8 @@
 #define log_error(fmt, ...) w_log_msg(LOG_ERROR, fmt, ##__VA_ARGS__)
 #define log_fatal(fmt, ...) w_log_msg(LOG_FATAL, fmt, ##__VA_ARGS__)
 
-#define w_perror(msg, err) log_error("%s: %s", msg, brt_strerror(err))
-#define w_pfatal(msg, err) log_fatal("%s: %s", msg, brt_strerror(err))
+#define w_perror(msg, err) log_error("%s: %s", msg, w_strerror(err))
+#define w_pfatal(msg, err) log_fatal("%s: %s", msg, w_strerror(err))
 
 enum brt_log_level
 {
