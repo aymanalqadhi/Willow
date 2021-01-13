@@ -1,5 +1,7 @@
 #include "willow/error.h"
 
+#include <string.h>
+
 const char *w_strerror(w_error_t err) {
   switch (err) {
   case WILLOW_ERR_SUCESS:
@@ -19,6 +21,6 @@ const char *w_strerror(w_error_t err) {
   case WILLOW_ERR_FILE:
     return "file error";
   default:
-    return "unknown error";
+    return strerror(err);
   }
 }
