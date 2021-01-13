@@ -5,6 +5,7 @@ project(willow C)
 
 # Project files
 set(SOURCE_FILES src/error.c
+                 src/logger.c
                  src/memory.c
                  src/main.c)
 include_directories(include)
