@@ -34,7 +34,9 @@ static const char *printable_tokes[] = {
     [WILLOW_TOK_WORD]           = "word",
     [WILLOW_TOK_IDENT]          = "ident",
     [WILLOW_TOK_KEYWORD]        = "keyword",
-    [WILLOW_TOK_GREATER_EQUAL]  = "great_equal",
+    [WILLOW_TOK_GREATER]        = "greater",
+    [WILLOW_TOK_GREATER_EQUAL]  = "greater_equal",
+    [WILLOW_TOK_LESS]           = "less",
     [WILLOW_TOK_LESS_EQUAL]     = "less_equal",
     [WILLOW_TOK_EQUAL]          = "equal",
     [WILLOW_TOK_NOT_EQUAL]      = "not_equal",
@@ -77,13 +79,15 @@ static const char *printable_tokes[] = {
 };
 
 struct w_token *w_token_new(w_token_type_t type, const char *text_buffer,
-                            size_t len, size_t line_num, size_t token_num) {
+                            size_t len, size_t line_num, size_t token_num,
+                            struct w_token *next) {
   struct w_token *tok = W_MALLOC(struct w_token, 1);
 
   tok->type        = type;
   tok->text_buffer = w_strndup(text_buffer, len);
   tok->line_num    = line_num;
   tok->token_num   = token_num;
+  tok->next        = next;
 
   return tok;
 }
@@ -98,7 +102,7 @@ void w_token_free(struct w_token *tok) {
 void w_token_print(const struct w_token *tok) {
   assert(tok != NULL);
 
-  log_info("%03d:%03d: %s \t %s", tok->line_num, tok->token_num,
+  log_info("%03d:%03d: %-20s => %-20s", tok->line_num, tok->token_num,
            tok->text_buffer, printable_tokes[tok->type]);
 }
 
